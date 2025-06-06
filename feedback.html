@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link href="src/output.css" rel="stylesheet">
+</head>
+<body class="font-jura font-bold flex flex-col min-h-dvh">
+
+    <div class="flex text-2xl pt-10 pl-30 justify-between w-[93%]">
+        <div class="flex">
+            <img src="img/icon.svg" alt="" class="mr-6 w-8">
+            <a href="index.html">Elite Wheels</a>
+        </div>
+        <div id="clock"></div>
+        <a href="feedback.html" class="hover:underline hover:underline-offset-4">Звортній зв’язок</a>
+        <a href="service.html" class="hover:underline hover:underline-offset-4">Сервіс</a>
+        <a href="registration.html" id="registrationLink" class="hover:underline hover:underline-offset-4">Реєстрація</a>
+        <a href="entrance.html" id="entranceLink" class="hover:underline hover:underline-offset-4">Вхід</a>
+        <a href="office.html" id="officeLink" class="hover:underline hover:underline-offset-4 hidden">Кабінет</a>
+        <a href="#" id="logoutLink" class="hover:underline hover:underline-offset-4 hidden">Вихід</a>
+    </div>
+
+    <div class="flex justify-center mt-20 flex-grow">
+        <form id="feedbackForm" class="w-full max-w-3xl" novalidate>
+            <h1 class="text-7xl text-center mb-7">Зворотній зв’язок</h1>
+            <div>
+                <label for="name" class="text-2xl">Ваше ім’я</label>
+                <input type="text" id="name" name="name"
+                    class="w-full rounded-lg bg-[#EAF2FF] p-3 mt-2"/>
+                <div class="error text-red-500" id="nameError"></div>
+            </div>
+            <div>
+                <label for="phone" class="text-2xl">Ваш номер телефону</label>
+                <input type="tel" id="phone" name="phone"
+                    class="w-full rounded-lg bg-[#EAF2FF] p-3 mt-2"/>
+                <div class="error text-red-500" id="phoneError"></div>
+            </div>
+            <div>
+                <label for="email" class="text-2xl">Ваша пошта</label>
+                <input type="email" id="email" name="email"
+                    class="w-full rounded-lg bg-[#EAF2FF] p-3 mt-2"/>
+                    <div class="error text-red-500" id="emailError"></div>
+            </div>
+            <div>
+                <label for="subject" class="text-2xl">Тема звернення</label>
+                <input type="text" id="subject" name="subject"
+                    class="w-full rounded-lg bg-[#EAF2FF] p-3 mt-2"/>
+                    <div class="error text-red-500" id="subjectError"></div>
+            </div>
+            <div>
+                <label for="message" class="text-2xl">Опис звернення</label>
+                <textarea id="message" name="message"
+                    class="w-full rounded-lg bg-[#EAF2FF] p-3 mt-2 h-40"></textarea>
+                    <div class="error text-red-500" id="messageError"></div>
+            </div>
+            <button type="submit"
+            class="w-full bg-[#4D60F2] hover:bg-[#7787FF] text-white text-2xl py-3 mt-7 rounded-4xl">Відправити
+            </button>
+        </form>
+    </div>
+    
+    <footer class="flex w-[100%] bg-[#4D60F2] justify-center pt-6 pb-5 text-lg text-white mt-10">
+        <p>© Elite Wheels, 2025</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/feedback.js"></script>
+
+</body>
+</html>

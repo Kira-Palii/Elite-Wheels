@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elite Wheels</title>
+    <link href="src/output.css" rel="stylesheet">
+</head>
+<body class="font-jura font-bold flex flex-col min-h-dvh">
+
+    <div class="flex text-2xl pt-10 pl-30 justify-between w-[93%]">
+        <div class="flex">
+            <img src="img/icon.svg" alt="" class="mr-6 w-8">
+            <a href="index.html">Elite Wheels</a>
+        </div>
+        <div id="clock"></div>
+        <a href="feedback.html" class="hover:underline hover:underline-offset-4">Звортній зв’язок</a>
+        <a href="service.html" class="hover:underline hover:underline-offset-4">Сервіс</a>
+        <a href="registration.html" id="registrationLink" class="hover:underline hover:underline-offset-4">Реєстрація</a>
+        <a href="entrance.html" id="entranceLink" class="hover:underline hover:underline-offset-4">Вхід</a>
+        <a href="office.html" id="officeLink" class="hover:underline hover:underline-offset-4 hidden">Кабінет</a>
+        <a href="#" id="logoutLink" class="hover:underline hover:underline-offset-4 hidden">Вихід</a>
+    </div>
+
+    <div class="flex">
+        <div class="float-left w-[50%] ml-30 mt-30">
+            <p class="text-7xl">Ваш шлях до преміум-автомобілів</p>
+            <p class="text-2xl pt-10 pb-10">Тут ви можете взяти в прокат преміум-автомобіль для будь-якої події. 
+            Від спортивних автомобілів до елегантних седанів — у нас є ідеальне авто для ваших потреб. 
+            Насолоджуйтесь легким бронюванням, гнучкими термінами оренди та винятковим сервісом</p>
+        <a href="service.html"><button class="bg-[#4D60F2] text-2xl rounded-4xl px-8 py-4 text-white hover:bg-[#7787FF]">Переглянути наш автопарк</button></a>
+        </div>
+        <img src="img/auto_index.svg" alt="" class="float-right">
+    </div>
+
+    <div class="flex w-full items-center justify-center mt-15">
+        <img src="img/arrow_l.svg" alt="" id="prev">
+        <div id="carousel" class="flex items-center transition-transform duration-500 ease-in-out"></div>
+        <img src="img/arrow_r.svg" alt="" id="next" class="ml-25">
+    </div>
+
+    <div class="flex justify-between items-center mt-30">
+
+        <div class="ml-30 w-full max-w-2xl">
+            <h2 class="text-5xl mb-7">Курс валют</h2>
+            <div class="flex">
+                <div class="p-3 pl-5 border rounded-l-4xl border-gray-400 w-[50%]">
+                    <p class="text-gray-400 text-xl">Дата</p>
+                    <input type="date" id="currency-date" class="w-full text-xl py-2">
+                </div>
+                <div class="p-3 pl-5 border rounded-r-4xl border-gray-400 w-[50%]">
+                    <p class="text-gray-400 text-xl">Валюта</p>
+                    <div class="flex">
+                        <select id="currency-type" class="w-full appearance-none py-2 focus:outline-none focus:ring-0 border-0 text-xl">
+                            <option disabled selected>Завантаження...</option>
+                        </select>
+                        <img src="img/arrow_b.svg" alt="" class="w-[8%] mr-3"> 
+                    </div>
+                </div>
+            </div>
+            <table class="w-full text-center">
+                <tr class="text-2xl">
+                    <td class="py-3">Базова валюта</td>
+                    <td>Валюта</td>
+                    <td>Купівля</td>
+                    <td>Продаж</td>
+                </tr>
+                <tr id="currency-result" class="bg-[#EAF2FF] rounded-xl text-center text-xl"></tr>                
+            </table>
+        </div>
+
+        <div class="w-full max-w-2xl mr-30">
+            <h2 class="text-5xl font-bold mb-7">Прогноз погоди</h2>
+            <div class="flex">
+                <div class="p-3 pl-5 border rounded-l-4xl border-gray-400 w-[50%]">
+                    <p class="text-gray-400 text-xl">Дата</p>
+                    <input type="date" id="weather-date" class="w-full text-xl py-2">
+                </div>
+                <div class="p-3 pl-5 border rounded-r-4xl border-gray-400 w-[50%]">
+                    <p class="text-gray-400 text-xl">Місто</p>
+                    <div class="flex">
+                        <select id="weather-city" class="w-full appearance-none py-2 text-xl focus:outline-none focus:ring-0 border-0">
+                            <option value="Odesa">Одеса</option>
+                            <option value="Kyiv">Київ</option>
+                            <option value="Lviv">Львів</option>
+                        </select> 
+                        <img src="img/arrow_b.svg" alt="" class="w-[8%] mr-3"> 
+                    </div>
+                </div>
+            </div>
+            <table class="w-full text-center">
+                <tr class="text-2xl">
+                    <td class="py-3">Температура</td>
+                    <td>Вітер</td>
+                    <td>Вологість</td>
+                    <td>Погода</td>
+                </tr>
+                <tr id="weather-result" class="bg-[#EAF2FF] rounded-xl text-center text-xl"></tr>                
+            </table>
+        </div>
+        
+    </div>
+
+    <footer class="flex w-full bg-[#4D60F2] justify-center pt-6 pb-5 text-lg text-white mt-10">
+        <p>© Elite Wheels, 2025</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office</title>
+    <link href="src/output.css" rel="stylesheet">
+</head>
+<body class="font-jura font-bold flex flex-col min-h-dvh">
+
+    <div class="flex text-2xl pt-10 pl-30 justify-between w-[93%]">
+        <div class="flex">
+            <img src="img/icon.svg" alt="" class="mr-6 w-8">
+            <a href="index.html">Elite Wheels</a>
+        </div>
+        <div id="clock"></div>
+        <a href="feedback.html" class="hover:underline hover:underline-offset-4">Звортній зв’язок</a>
+        <a href="service.html" class="hover:underline hover:underline-offset-4">Сервіс</a>
+        <a href="registration.html" id="registrationLink" class="hover:underline hover:underline-offset-4">Реєстрація</a>
+        <a href="entrance.html" id="entranceLink" class="hover:underline hover:underline-offset-4">Вхід</a>
+        <a href="office.html" id="officeLink" class="hover:underline hover:underline-offset-4 hidden">Кабінет</a>
+        <a href="#" id="logoutLink" class="hover:underline hover:underline-offset-4 hidden">Вихід</a>
+    </div>
+
+    <div class="flex flex-grow flex-col mt-9 ml-30 mr-30">
+        <div class="flex justify-between items-center w-full mb-7">
+            <p class="text-5xl">Керування задачами</p>
+            <div class="flex border rounded-full items-center justify-between py-3 border-gray-400">
+                <select id="filterSelect" class="text-2xl pl-6 w-full appearance-none focus:outline-none focus:ring-0">
+                    <option value="all">Усі</option>
+                    <option value="active">В роботі</option>
+                    <option value="done">Виконано</option>
+                    <option value="deleted">Видалено</option>
+                </select>
+                <img src="img/arrow_b.svg" alt="" class="w-[10%] mr-5 mt-1"> 
+            </div>
+        </div>
+
+        <div class="flex flex-wrap gap-6 mb-6 items-center">
+            <input type="text" id="taskInput" placeholder="Опишіть задачу…" class="flex-1 border rounded-full px-5 py-3 text-2xl border-gray-400"/>
+            <button id="addTaskBtn" class="bg-[#4D60F2] text-2xl text-white px-15 py-3 rounded-full hover:bg-[#7787FF]">Додати</button>
+        </div>
+
+        <div id="tasksContainer" class="space-y-4"></div>
+    </div>
+
+    <footer class="flex w-[100%] bg-[#4D60F2] justify-center pt-6 pb-5 text-lg text-white mt-10">
+        <p>© Elite Wheels, 2025</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/office.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link href="src/output.css" rel="stylesheet">
+</head>
+<body class="font-jura font-bold flex flex-col min-h-dvh">
+
+    <div class="flex text-2xl pt-10 pl-30 justify-between w-[93%]">
+        <div class="flex">
+            <img src="img/icon.svg" alt="" class="mr-6 w-8">
+            <a href="index.html">Elite Wheels</a>
+        </div>
+        <div id="clock"></div>
+        <a href="feedback.html" class="hover:underline hover:underline-offset-4">Звортній зв’язок</a>
+        <a href="service.html" class="hover:underline hover:underline-offset-4">Сервіс</a>
+        <a href="registration.html" id="registrationLink" class="hover:underline hover:underline-offset-4">Реєстрація</a>
+        <a href="entrance.html" id="entranceLink" class="hover:underline hover:underline-offset-4">Вхід</a>
+        <a href="office.html" id="officeLink" class="hover:underline hover:underline-offset-4 hidden">Кабінет</a>
+        <a href="#" id="logoutLink" class="hover:underline hover:underline-offset-4 hidden">Вихід</a>
+    </div>
+
+    <div class="flex flex-grow flex-col mt-7 ml-30 mr-30">
+        <div class="flex justify-between items-center w-full mb-7">
+            <p class="text-5xl">Обрати автомобіль</p>
+            <button id="cartBtn"><img src="img/cart_variant.svg" alt="" class="w-[90%]"></button>
+        </div>
+        <div class="flex justify-center">
+            <div class="p-3 pl-5 border rounded-l-4xl border-gray-400 w-[50%]">
+                <p class="text-gray-400 text-xl">Марка</p>
+                <div class="flex">
+                    <select id="brand" class="w-full appearance-none py-2 text-xl text-gray-700 focus:outline-none focus:ring-0 border-0">
+                        <option value="">Обрати</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Maybach">Maybach</option>
+                        <option value="Porsche">Porsche</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Rolls-Royce">Rolls-Royce</option>
+                    </select>       
+                    <img src="img/arrow_b.svg" alt="" class="w-[8%] mr-3">              
+                </div>
+            </div>
+            <div class="p-3 pl-5 border border-gray-400 w-[50%]">
+                <p class="text-gray-400 text-xl">Модель</p>
+                <div class="flex">
+                    <select id="model" class="w-full appearance-none py-2 text-xl text-gray-700 focus:outline-none focus:ring-0 border-0">
+                        <option value="">Обрати</option>
+                        <option value="GT-R">GT-R</option>
+                        <option value="TT RS">TT RS</option>
+                        <option value="S-Class">S-Class</option>
+                        <option value="Cayman">Cayman</option>
+                        <option value="M3">M3</option>
+                        <option value="Dawn">Dawn</option>
+                    </select>       
+                    <img src="img/arrow_b.svg" alt="" class="w-[8%] mr-3">              
+                </div>
+            </div>
+            <div class="p-3 pl-5 border border-gray-400 w-[50%]">
+                <p class="text-gray-400 text-xl">Місто</p>
+                <div class="flex">
+                    <select id="city" class="w-full appearance-none py-2 text-xl text-gray-700 focus:outline-none focus:ring-0 border-0">
+                        <option value="">Обрати</option>
+                        <option value="Київ">Київ</option>
+                        <option value="Львів">Львів</option>
+                        <option value="Одеса">Одеса</option>
+                    </select>       
+                    <img src="img/arrow_b.svg" alt="" class="w-[8%] mr-3">              
+                </div>
+            </div>
+            <div class="p-3 pl-5 border border-gray-400 w-[50%]">
+                <p class="text-gray-400 text-xl">Початок оренди</p>
+                <input type="date" id="startDate" class="w-full appearance-none py-2 text-xl text-gray-700 focus:outline-none focus:ring-0 border-0" placeholder="Початок оренди">
+            </div>
+            <div class="p-3 pl-5 border rounded-r-4xl border-gray-400 w-[50%]">
+                <p class="text-gray-400 text-xl">Кінець оренди</p>
+                <input type="date" id="endDate" class="w-full appearance-none py-2 text-xl text-gray-700 focus:outline-none focus:ring-0 border-0" placeholder="Кінець оренди">
+            </div>
+            <button id="filterBtn" class="bg-[#4D60F2] hover:bg-[#7787FF] text-white px-15 rounded-4xl ml-5 text-2xl">Пошук</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+            <div class="bg-[#EAF2FF] p-4 rounded-xl flex flex-col h-98" data-brand="Nissan" data-model="GT-R" data-city="Київ">
+                <p class="text-2xl">Nissan GT-R</p>
+                <p class="text-gray-500">Спортивний</p>
+                <div class="flex justify-center"><img src="img/service/image 1.svg" alt="Nissan GT-R" class="w-[85%] object-cover rounded"></div>
+                <div class="flex mt-4 gap-13 justify-center w-[100%]">
+                    <div class="flex"><img src="img/gas_station.svg" alt="">
+                    <p class="text-gray-500 ml-3">74L</p></div>
+                    <div class="flex"><img src="img/rudder.svg" alt="">
+                    <p class="text-gray-500 ml-3">Автомат</p></div>
+                    <div class="flex"><img src="img/account_multiple.svg" alt="">
+                    <p class="text-gray-500 ml-3">4 місця</p></div>
+                </div>
+                <div class="flex mt-5 justify-between items-center">
+                    <p class="text-3xl">6000 грн/доба</p>
+                    <button class="bg-[#4D60F2] hover:bg-[#7787FF] text-white text-xl py-3 px-10 rounded-xl" onclick="addToCart('Nissan GT-R', 6000)">Обрати</button>
+                </div>
+            </div>
+            <div class="bg-[#EAF2FF] p-4 rounded-xl flex flex-col h-98" data-brand="Audi" data-model="TT RS" data-city="Львів">
+                <p class="text-2xl">Audi TT RS</p>
+                <p class="text-gray-500">Спортивний</p>
+                <div class="flex justify-center"><img src="img/service/image 2.svg" alt="Audi TT RS" class="w-[86%] object-cover rounded"></div>
+                <div class="flex mt-4 gap-13 justify-center w-[100%]">
+                    <div class="flex"><img src="img/gas_station.svg" alt="">
+                    <p class="text-gray-500 ml-3">55L</p></div>
+                    <div class="flex"><img src="img/rudder.svg" alt="">
+                    <p class="text-gray-500 ml-3">Автомат</p></div>
+                    <div class="flex"><img src="img/account_multiple.svg" alt="">
+                    <p class="text-gray-500 ml-3">4 місця</p></div>
+                </div>
+                <div class="flex mt-5 justify-between items-center">
+                    <p class="text-3xl">3000 грн/доба</p>
+                    <button class="bg-[#4D60F2] hover:bg-[#7787FF] text-white text-xl py-3 px-10 rounded-xl" onclick="addToCart('Audi TT RS', 3000)">Обрати</button>
+                </div>
+            </div>
+            <div class="bg-[#EAF2FF] p-4 rounded-xl flex flex-col h-98" data-brand="Maybach" data-model="S-Class" data-city="Одеса">
+                <p class="text-2xl">Maybach S-Class</p>
+                <p class="text-gray-500">Ультрапреміальний седан</p>
+                <div class="flex justify-center"><img src="img/service/image 3.svg" alt="Maybach S-Class" class="w-[80%] object-cover rounded"></div>
+                <div class="flex mt-4 gap-13 justify-center w-[100%]">
+                    <div class="flex"><img src="img/gas_station.svg" alt="">
+                    <p class="text-gray-500 ml-3">76L</p></div>
+                    <div class="flex"><img src="img/rudder.svg" alt="">
+                    <p class="text-gray-500 ml-3">Автомат</p></div>
+                    <div class="flex"><img src="img/account_multiple.svg" alt="">
+                    <p class="text-gray-500 ml-3">5 місця</p></div>
+                </div>
+                <div class="flex mt-5 justify-between items-center">
+                    <p class="text-3xl">7500 грн/доба</p>
+                    <button class="bg-[#4D60F2] hover:bg-[#7787FF] text-white text-xl py-3 px-10 rounded-xl" onclick="addToCart('Maybach S-Class', 7500)">Обрати</button>
+                </div>
+            </div>
+            <div class="bg-[#EAF2FF] p-4 rounded-xl flex flex-col h-98" data-brand="Porsche" data-model="Cayman" data-city="Київ">
+                <p class="text-2xl">Porsche Cayman</p>
+                <p class="text-gray-500">Спортивний</p>
+                <div class="flex justify-center"><img src="img/service/image 4.svg" alt="Porsche Cayman" class="w-[80%] object-cover rounded"></div>
+                <div class="flex mt-4 gap-13 justify-center w-[100%]">
+                    <div class="flex"><img src="img/gas_station.svg" alt="">
+                    <p class="text-gray-500 ml-3">54L</p></div>
+                    <div class="flex"><img src="img/rudder.svg" alt="">
+                    <p class="text-gray-500 ml-3">Механіка</p></div>
+                    <div class="flex"><img src="img/account_multiple.svg" alt="">
+                    <p class="text-gray-500 ml-3">2 місця</p></div>
+                </div>
+                <div class="flex mt-5 justify-between items-center">
+                    <p class="text-3xl">3000 грн/доба</p>
+                    <button class="bg-[#4D60F2] hover:bg-[#7787FF] text-white text-xl py-3 px-10 rounded-xl" onclick="addToCart('Porsche Cayman', 3000)">Обрати</button>
+                </div>
+            </div>
+            <div class="bg-[#EAF2FF] p-4 rounded-xl flex flex-col h-98" data-brand="BMW" data-model="M3" data-city="Львів">
+                <p class="text-2xl">BMW M3</p>
+                <p class="text-gray-500">Спортивний седан</p>
+                <div class="flex justify-center"><img src="img/service/image 5.svg" alt="BMW M3" class="w-[88%] object-cover rounded"></div>
+                <div class="flex mt-4 gap-13 justify-center w-[100%]">
+                    <div class="flex"><img src="img/gas_station.svg" alt="">
+                    <p class="text-gray-500 ml-3">60L</p></div>
+                    <div class="flex"><img src="img/rudder.svg" alt="">
+                    <p class="text-gray-500 ml-3">Механіка</p></div>
+                    <div class="flex"><img src="img/account_multiple.svg" alt="">
+                    <p class="text-gray-500 ml-3">5 місця</p></div>
+                </div>
+                <div class="flex mt-5 justify-between items-center">
+                    <p class="text-3xl">3000 грн/доба</p>
+                    <button class="bg-[#4D60F2] hover:bg-[#7787FF] text-white text-xl py-3 px-10 rounded-xl" onclick="addToCart('BMW M3', 3000)">Обрати</button>
+                </div>
+            </div>
+            <div class="bg-[#EAF2FF] p-4 rounded-xl flex flex-col h-98" data-brand="Rolls-Royce" data-model="Dawn" data-city="Одеса">
+                <p class="text-2xl">Rolls-Royce Dawn</p>
+                <p class="text-gray-500">Преміальний кабріолет</p>
+                <div class="flex justify-center"><img src="img/service/image 6.svg" alt="Rolls-Royce Dawn" class="w-[92%] object-cover rounded"></div>
+                <div class="flex mt-4 gap-13 justify-center w-[100%]">
+                    <div class="flex"><img src="img/gas_station.svg" alt="">
+                    <p class="text-gray-500 ml-3">80L</p></div>
+                    <div class="flex"><img src="img/rudder.svg" alt="">
+                    <p class="text-gray-500 ml-3">Автомат</p></div>
+                    <div class="flex"><img src="img/account_multiple.svg" alt="">
+                    <p class="text-gray-500 ml-3">4 місця</p></div>
+                </div>
+                <div class="flex mt-5 justify-between items-center">
+                    <p class="text-3xl">14500 грн/доба</p>
+                    <button class="bg-[#4D60F2] hover:bg-[#7787FF] text-white text-xl py-3 px-10 rounded-xl" onclick="addToCart('Rolls-Royce Dawn', 14500)">Обрати</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartModal" class="fixed inset-0 bg-black/50 flex justify-center items-center hidden">
+        <div class="bg-white p-6 rounded-xl w-1/2 max-h-[80%]">
+            <div class="flex justify-between w-full items-center">
+                <p class="text-5xl mb-4">Корзина</p>
+                <button id="closeCart"><img src="img/close.svg" alt="" class="w-[90%] mb-2 float-right"></button>
+            </div>
+            <div id="cartItems"></div>
+            <p class="text-3xl mt-4">Сума до сплати: <span id="totalPrice">0</span> грн</p>
+            <button id="payBtn" class="bg-[#4D60F2] hover:bg-[#7787FF] text-white p-4 rounded-xl mt-4 w-full text-2xl">Сплатити</button>
+        </div>
+    </div>
+    
+    <footer class="flex w-[100%] bg-[#4D60F2] justify-center pt-6 pb-5 text-lg text-white mt-10">
+        <p>© Elite Wheels, 2025</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/service.js"></script>
+
+</body>
+</html>
